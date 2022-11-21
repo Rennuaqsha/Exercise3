@@ -61,10 +61,32 @@ namespace Exercise_linked_list_A
         public void FirstNode()
         {
             if (listEmpty())
-                Console.WriteLine("\mList is empty");
+                Console.WriteLine("\nList is empty");
             else
                 Console.WriteLine("\nThe First record in the list is:\n\n" +
                     Last.next.rollNumber + " " + Last.next.name);
+        }
+
+        static void main(string[] args)
+        {
+            CircularList obj = new CircularList();  
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\nMenu");
+                    Console.WriteLine("1. view all the records in the list");
+                    Console.WriteLine("2. search for a second in the list");
+                    Console.WriteLine("3. display the first record in the list");
+                    Console.WriteLine("4. exit");
+                    Console.Write("\nEnter your choice (1-4): ");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+
+                    }
+                }
+            }
         }
     }
 }
