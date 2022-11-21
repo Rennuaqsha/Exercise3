@@ -68,6 +68,21 @@ namespace Exercise_linked_list_A
                     Last.next.rollNumber + " " + Last.next.name);
         }
 
+        public void addnode()
+        {
+            int num;
+            string nm;
+            Console.Write("\nEnter the roll number off the student: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the name of student: ");
+            nm = Console.ReadLine();
+            node newnode = new node();
+            newnode.noMhs = num;
+            newnode.name = nm;
+        }
+
+
+
         static void main(string[] args)
         {
             CircularList obj = new CircularList();  
