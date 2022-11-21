@@ -10,4 +10,13 @@ namespace Exercise_linked_list_A
         public string name;
         public node next;
     }
+    class CircularList
+    {
+        node Last;
+
+        public CircularList()
+        {
+            Last = null;
+        }
+    }
 }
