@@ -110,8 +110,15 @@ namespace Exercise_linked_list_A
                                 }
                             }
                             break;
+                        case '3':
+                            {
+                                obj.FirstNode();
+                            }
+                            break;
+                        
                     }
                 }
+                
             }
         }
     }
