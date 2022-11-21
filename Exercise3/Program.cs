@@ -115,10 +115,19 @@ namespace Exercise_linked_list_A
                                 obj.FirstNode();
                             }
                             break;
-                        
+                        case '4':
+                            return;
+                            default:
+                            {
+                                Console.WriteLine("invalid option");
+                                break;
+                            }
                     }
                 }
-                
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
             }
         }
     }
