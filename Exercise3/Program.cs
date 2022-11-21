@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Versioning;
 using System.Xml;
 
 namespace Exercise_linked_list_A
@@ -31,6 +32,13 @@ namespace Exercise_linked_list_A
                 return true;
             else
                 return (false);/*return false if the node is not found*/ 
+        }
+        public bool listEmpty()
+        {
+            if (Last == null)
+                return true;
+            else 
+                return false;
         }
     }
 }
