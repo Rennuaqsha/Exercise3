@@ -58,5 +58,13 @@ namespace Exercise_linked_list_A
                 Console.Write(Last.rollNumber + " " + Last.name + "n");
             }
         }
+        public void FirstNode()
+        {
+            if (listEmpty())
+                Console.WriteLine("\mList is empty");
+            else
+                Console.WriteLine("\nThe First record in the list is:\n\n" +
+                    Last.next.rollNumber + " " + Last.next.name);
+        }
     }
 }
