@@ -40,5 +40,23 @@ namespace Exercise_linked_list_A
             else 
                 return false;
         }
+
+        public void traverse()/*traverses all the nodes of the list*/
+        {
+            if (listEmpty())
+                Console.WriteLine("nlist is empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the list are : \n");
+                node currentNode;
+                currentNode = Last.next;
+                while (currentNode != Last)
+                {
+                    Console.Write(currentNode.rollNumber + " " + currentNode + "\n");
+                    currentNode = currentNode.next;
+                }
+                Console.Write(Last.rollNumber + " " + Last.name + "n");
+            }
+        }
     }
 }
