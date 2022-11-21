@@ -19,20 +19,21 @@ namespace Exercise_linked_list_A
         {
             Last = null;
         }
-        public bool Search(int rollNo, ref previous, ref node current)
+
+        public bool Serach(int rollNo, ref node previous, ref node current)
         /*Searches for the specified node*/
         {
-            for (previous = current = Last.next; current != Last; previous = current,
-                 current = current = current.next)
+            for (previous = current = Last.next; current != Last; previous = current, current = current.next)
             {
-                if (rollNo == current.rollNumber)
-                    return (true); /*return true if the node is found*/
+                if (rollNo == current.next)
+                    return (true); /*returns true if the node is found*/
             }
             if (rollNo == Last.rollNumber)/*if the node is present at the end*/
                 return true;
             else
-                return (false);/*return false if the node is not found*/ 
+                return (false);/*returns false if the node is not found*/
         }
+        
         public bool listEmpty()
         {
             if (Last == null)
@@ -83,7 +84,32 @@ namespace Exercise_linked_list_A
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
                     {
-
+                        case '1':
+                            {
+                                obj.traverse();
+                            }
+                            break;
+                        case '2':
+                            {
+                                if(obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                node prev, curr;
+                                prev = curr = null;
+                                Console.Write("\nEnter the roll number of the student whose record is to be searched: ");
+                                int num = Convert.ToInt32(Console.ReadLine());
+                                if (obj.Serach(num, ref prev, ref curr) == false)
+                                    Console.WriteLine("\nRecord not found");
+                                else
+                                {
+                                    Console.WriteLine("\nrecord found");
+                                    Console.WriteLine("\nRoll number: " + curr.rollNumber);
+                                    Console.WriteLine("\nName: " + curr.name);
+                                }
+                            }
+                            break;
                     }
                 }
             }
